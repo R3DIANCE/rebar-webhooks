@@ -32,7 +32,7 @@ export function useWebhook() {
         return URLS.set(category, url);
     }
     function Get(category: string): string | undefined {
-        if (!URLS.has(category)) alt.log(`WebhookAPI: ~r~Category '${category}' not found.`);
+        if (!URLS.has(category)) return alt.log(`WebhookAPI: ~r~Category '${category}' not found.`);
         return URLS.get(category);
     }
 
